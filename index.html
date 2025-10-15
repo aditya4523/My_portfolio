@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Narain Tiwari - Home</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Custom variables for colors */
+        :root {
+            --accent-color: #2DD4BF; /* Teal 400 - used for accents */
+            --dark-background: #0F172A; /* Slate 900 - very dark blue/gray */
+            --card-background: #1E293B; /* Slate 800 - slightly lighter for cards */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-background);
+            color: #E2E8F0; /* Slate 200 - light text */
+            overflow-x: hidden;
+        }
+        .accent-text {
+            color: var(--accent-color);
+        }
+        /* Custom header line under section title */
+        .section-heading::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin-top: 8px;
+            margin-left: 0;
+            border-radius: 1.5px;
+        }
+        
+        /* Custom styling for the hero background effect (using the uploaded drone image) */
+        .hero-bg-overlay {
+            /* IMPORTANT: File path references the uploaded image content ID */
+            background-image: url('drone_background.jpg'); 
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.4; /* Subtle opacity for the dark background graphic */
+            z-index: 0;
+        }
+        
+        /* Styling for the profile picture frame */
+        .profile-picture-frame {
+            position: relative;
+            z-index: 2;
+            border: 2px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 4px; 
+            transition: all 0.3s ease;
+            background-color: var(--dark-background); /* Ensure image background is dark */
+        }
+        .profile-picture-frame:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(45, 212, 191, 0.3);
+        }
+        /* Styling for the floating blue box accents */
+        .blue-accent-box-tl {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--accent-color);
+            border-radius: 8px;
+            z-index: 1;
+        }
+        .blue-accent-box-br {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent-color);
+            border-radius: 8px;
+            z-index: 1;
+        }
+        
+        /* Styling for skill badges */
+        .skill-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            margin: 4px;
+            background-color: #1E293B; /* Slate 800 */
+            color: var(--accent-color);
+            border: 1px solid #334155; /* Slate 700 */
+            border-radius: 9999px;
+            font-size: 0.875rem; /* text-sm */
+            transition: background-color 0.3s;
+        }
+        .skill-badge:hover {
+             background-color: #334155; /* Slate 700 */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Hero Background Effect (Low opacity dark drone image) -->
+    <div class="hero-bg-overlay"></div>
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-40 w-full bg-[#0F172A]/90 backdrop-blur-sm shadow-xl transition-all duration-300">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Name (ANT) -->
+            <div class="text-2xl font-black text-white">NARAYAN'S Portfolio</div>
+            
+            <!-- Desktop Nav Links (Updated for multi-page linking) -->
+            <div class="hidden lg:flex space-x-8 text-sm font-medium">
+                <a href="index.html" class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1">Home</a>
+                <a href="projects.html" class="hover:text-cyan-400 transition duration-300">Projects</a>
+                <a href="education.html" class="hover:text-cyan-400 transition duration-300">Education</a>
+                <a href="contact.html" class="hover:text-cyan-400 transition duration-300">Contact</a>
+            </div>
+
+            <!-- Icons and Resume Button (Right Side) -->
+            <div class="flex items-center space-x-4">
+                <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQGT07MjA6UfvQAAAZm84gSoR6XRjEps4v59xghSP0GsTwuyn0mzTEo5oFLnsLv9BUHXTQcciZN6prv8-1pD0JebQXq-i4Q1ND_llz8MWc2YhBughu-
+                GkbKYBPD5Sv9UH-moVYU=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Faditya-narain-t-974467304" target="_blank" class="text-xl hover:text-cyan-400 transition duration-300 hidden sm:block" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/aditya4523" target="_blank" class="text-xl hover:text-cyan-400 transition duration-300 hidden sm:block" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="py-2 px-4 text-sm font-semibold rounded-lg bg-cyan-400 text-gray-900 hover:bg-cyan-300 transition duration-300 shadow-md">
+                    Resume
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button (Hamburger) - Not implemented here for simplicity, but reserved space -->
+            <button class="lg:hidden text-2xl hover:text-cyan-400">
+                 <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 relative z-10">
+        
+        <!-- I. The Hero Section (First View) -->
+        <section id="home" class="min-h-[85vh] flex items-center relative">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center w-full">
+                
+                <!-- Left Column - Text and Buttons -->
+                <div class="lg:col-span-3 space-y-6 order-2 lg:order-1 text-center lg:text-left">
+                    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+                        Aditya Narain <br>
+                        <span class="accent-text">Tiwari...</span>
+                    </h1>
+                    
+                    <p class="text-lg uppercase tracking-widest font-semibold opacity-75 pt-2">
+                        ECE (IoT) B.Tech Engineer
+                    </p>
+                    
+                    <p class="text-2xl md:text-3xl font-light max-w-xl mx-auto lg:mx-0 text-slate-300">
+                        Bridging theoretical concepts with practical, scalable **IoT solutions**.
+                    </p>
+
+                    <!-- Contact Info -->
+                    <div class="pt-4 space-y-2 lg:space-y-0 lg:flex lg:space-x-6 justify-center lg:justify-start text-base">
+                       
+                       
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-6 justify-center lg:justify-start">
+                        <!-- Primary Button: View My Projects (Links to projects.html) -->
+                        <a href="projects.html" class="flex items-center justify-center space-x-2 py-3 px-6 text-base font-semibold rounded-lg bg-cyan-400 text-gray-900 hover:bg-cyan-300 transition duration-300 shadow-lg">
+                            <span>View My Projects</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <!-- Secondary Button: View Resume -->
+                        
+                    </div>
+                    
+                    <!-- Bottom Left Social Icons -->
+                    
+                </div>
+
+                <!-- Right Column - Profile Picture -->
+                <div class="lg:col-span-2 flex justify-center lg:justify-end order-1 lg:order-2">
+                    <div class="relative w-64 h-80 sm:w-80 sm:h-96">
+                        <!-- Profile Picture and Frame -->
+                        <div class="profile-picture-frame">
+                            <!-- IMPORTANT: Image path references the uploaded file content ID -->
+                            <img 
+                                src="my_photo.jpg" 
+                                onerror="this.onerror=null;this.src='https://placehold.co/320x400/0F172A/E2E8F0?text=Profile+Image';"
+                                alt="Aditya Narain Tiwari - Profile" 
+                                class="w-full h-full object-cover rounded-lg"
+                            >
+                        </div>
+                        
+                        <!-- Floating Accent Boxes (Hidden on mobile for cleaner look) -->
+                        <div class="blue-accent-box-tl hidden sm:block"></div>
+                        <div class="blue-accent-box-br hidden sm:block"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- -->
+        <!-- III. About Me / Skills -->
+        <section id="about" class="py-24">
+            <h2 class="text-4xl font-extrabold mb-12 section-heading">About Me</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Bio -->
+                <div class="lg:col-span-2 space-y-6">
+                    <p class="text-lg text-slate-300">
+                        I am a final-year Electronic and Communication Engineering student at MMMUT, specializing in **Internet of Things (IoT)** and Embedded Systems. I am deeply passionate about turning complex theoretical concepts into practical, scalable solutions, particularly in the realm of smart devices and autonomous systems.
+                    </p>
+                    <p class="text-lg text-slate-300">
+                        My key value lies in complex system design and rapid prototyping. I thrive on interdisciplinary challenges, combining skills in **Computer Vision**, **Aerodynamics**, and **Embedded Programming** to build robust, functional hardware and software. I am actively seeking roles where I can apply my expertise in developing the next generation of intelligent systems.
+                    </p>
+                </div>
+                
+                <!-- Skills -->
+                <div class="lg:col-span-1">
+                    <h3 class="text-2xl font-semibold accent-text mb-6">Technical Skills</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <p class="font-medium text-slate-300 mb-2">Programming Languages</p>
+                            <div class="flex flex-wrap">
+                                <span class="skill-badge">Python</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="font-medium text-slate-300 mb-2">Software & Tools</p>
+                            <div class="flex flex-wrap">
+                                <span class="skill-badge">NumPy</span>
+                                <span class="skill-badge">OpenCV</span>
+                                <span class="skill-badge">YOLO</span>
+                                <span class="skill-badge">PyTorch</span>
+                                <span class="skill-badge">SolidWorks</span>
+                                <span class="skill-badge">LTSpice</span>
+                                <span class="skill-badge">Multisim</span>
+                                <span class="skill-badge">MS Office (Word, PPT, Excel)</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <p class="font-medium text-slate-300 mb-2">Hardware & Embedded</p>
+                            <div class="flex flex-wrap">
+                                <span class="skill-badge">Raspberry Pi</span>
+                                <span class="skill-badge">Arduino</span>
+                                <span class="skill-badge">Sensors/Actuators</span>
+                                <span class="skill-badge">Embedded Systems</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <p class="font-medium text-slate-300 mb-2">Fields of Interest</p>
+                            <div class="flex flex-wrap">
+                                <span class="skill-badge">IoT</span>
+                                <span class="skill-badge">Autonomous Drones & UAV</span>
+                                <span class="skill-badge">Aerodynamics</span>
+                                <span class="skill-badge">Computer Vision</span>
+                                <span class="skill-badge">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Used across all pages) -->
+    <footer class="bg-gray-900 py-12 border-t border-slate-700/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Info Column -->
+                <div class="md:col-span-2">
+                    <h4 class="text-2xl font-black accent-text mb-3">Aditya Narain Tiwari</h4>
+                    <p class="text-sm text-slate-400 max-w-sm">
+                        ECE (IoT) B.Tech Engineer passionate about leveraging **Computer Vision** and **Embedded Systems** to create next-generation autonomous and scalable technical solutions.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="http://www.linkedin.com/in/aditya" target="_blank" class="text-xl text-slate-400 hover:text-cyan-400 transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/aditya" target="_blank" class="text-xl text-slate-400 hover:text-cyan-400 transition" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-xl text-slate-400 hover:text-cyan-400 transition" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="index.html" class="hover:text-cyan-400 transition">Home</a></li>
+                        <li><a href="projects.html" class="hover:text-cyan-400 transition">Projects</a></li>
+                        <li><a href="education.html" class="hover:text-cyan-400 transition">Education & Experience</a></li>
+                        <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact Details</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-envelope pt-1 accent-text"></i>
+                            <a href="mailto:narayanadigkp23@gmail.com" class="hover:text-cyan-400 transition">narayanadigkp23@gmail.com</a>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-phone pt-1 accent-text"></i>
+                            <a href="tel:+919369669102" class="hover:text-cyan-400 transition">+91 9369669102</a>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-map-marker-alt pt-1 accent-text"></i>
+                            <span>Gorakhpur, India</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright Line -->
+            <div class="mt-8 pt-4 border-t border-slate-700/50 text-center text-xs text-slate-500">
+                <p>&copy; 2025 Aditya Narain Tiwari. All rights reserved. | <a href="#" class="hover:text-cyan-400">Privacy Policy</a></p>
+                <p class="mt-1">Designed and Developed by Aditya Narain Tiwari.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

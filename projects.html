@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Narain Tiwari - Projects</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Custom variables for colors */
+        :root {
+            --accent-color: #2DD4BF; /* Teal 400 - used for accents */
+            --dark-background: #0F172A; /* Slate 900 - very dark blue/gray */
+            --card-background: #1E293B; /* Slate 800 - slightly lighter for cards */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-background);
+            color: #E2E8F0; /* Slate 200 - light text */
+            overflow-x: hidden;
+        }
+        .accent-text {
+            color: var(--accent-color);
+        }
+        .section-heading::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin-top: 8px;
+            margin-left: 0;
+            border-radius: 1.5px;
+        }
+        
+        .skill-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            margin: 4px;
+            background-color: #1E293B; /* Slate 800 */
+            color: var(--accent-color);
+            border: 1px solid #334155; /* Slate 700 */
+            border-radius: 9999px;
+            font-size: 0.875rem; /* text-sm */
+            transition: background-color 0.3s;
+        }
+        .skill-badge:hover {
+             background-color: #334155; /* Slate 700 */
+        }
+        
+        /* Modal Backdrop Styling */
+        .modal-backdrop {
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(4px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-40 w-full bg-[#0F172A]/90 backdrop-blur-sm shadow-xl transition-all duration-300">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Name (ANT) -->
+            <div class="text-2xl font-black text-white">ANT</div>
+            
+            <!-- >>> START: MAIN NAVIGATION BAR LINKS (UPDATED FOR MULTI-PAGE) <<< -->
+            <div class="hidden lg:flex space-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-cyan-400 transition duration-300">Home</a>
+                <a href="projects.html" class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1">Projects</a>
+                <a href="education.html" class="hover:text-cyan-400 transition duration-300">Education</a>
+                <a href="contact.html" class="hover:text-cyan-400 transition duration-300">Contact</a>
+            </div>
+            <!-- >>> END: MAIN NAVIGATION BAR LINKS <<< -->
+
+            <!-- Icons and Resume Button (Right Side) -->
+            <div class="flex items-center space-x-4">
+                <a href="http://www.linkedin.com/in/aditya" target="_blank" class="text-xl hover:text-cyan-400 transition duration-300 hidden sm:block" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/aditya" target="_blank" class="text-xl hover:text-cyan-400 transition duration-300 hidden sm:block" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="py-2 px-4 text-sm font-semibold rounded-lg bg-cyan-400 text-gray-900 hover:bg-cyan-300 transition duration-300 shadow-md">
+                    Resume
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button (Hamburger) - Not implemented here for simplicity, but reserved space -->
+            <button class="lg:hidden text-2xl hover:text-cyan-400">
+                 <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 relative z-10 min-h-screen">
+        
+        <!-- VI. Projects (The Main Attraction) -->
+        <section id="projects" class="py-12 md:py-24">
+            <h2 class="text-4xl font-extrabold mb-12 text-center section-heading mx-auto">My Projects</h2>
+             <p class="text-center text-lg max-w-2xl mx-auto text-slate-400 mb-16">
+                Discussing innovative projects in IoT, computer vision, and embedded systems. Click the Deep Dive link to learn about the Situation, Action, and Result for each project.
+            </p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                
+                <!-- Project Card 1: Fixed-Wing Aircraft -->
+                <div class="bg-card-background rounded-xl overflow-hidden shadow-2xl hover:scale-[1.02] transition duration-500 hover:shadow-cyan-500/50">
+                    <img src="https://placehold.co/600x400/1E293B/2DD4BF?text=Fixed-Wing+UAV+Mockup" alt="Fixed-Wing Aircraft Project Image" class="w-full h-48 object-cover">
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-2xl font-bold accent-text">Fixed-Wing Aircraft</h3>
+                        <p class="text-slate-300 text-sm uppercase font-medium">Nov 2024 - Jan 2025</p>
+                        <p class="text-slate-400">**S-A-R Summary:** Designed and fabricated an RC fixed-wing aircraft for competition, optimizing for aerodynamics and stability.</p>
+                        
+                        <div class="pt-2">
+                             <h4 class="text-sm font-semibold text-white mb-2">Key Technologies:</h4>
+                             <div class="flex flex-wrap gap-2">
+                                 <span class="skill-badge !text-xs !py-1 !px-2">Aerodynamics</span>
+                                 <span class="skill-badge !text-xs !py-1 !px-2">SolidWorks (Design)</span>
+                                 <span class="skill-badge !text-xs !py-1 !px-2">Flight Control</span>
+                             </div>
+                        </div>
+
+                        <div class="flex space-x-4 pt-4">
+                            <a href="#" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition font-medium flex items-center space-x-2">
+                                <i class="fab fa-github"></i> <span>Repository</span>
+                            </a>
+                            <button onclick="openModal('fixedWing')" class="text-cyan-400 hover:text-cyan-300 transition font-medium flex items-center space-x-2">
+                                <i class="fas fa-external-link-alt"></i> <span>Deep Dive</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Number Detection Using Hand -->
+                <div class="bg-card-background rounded-xl overflow-hidden shadow-2xl hover:scale-[1.02] transition duration-500 hover:shadow-cyan-500/50">
+                    <img src="https://placehold.co/600x400/1E293B/2DD4BF?text=Hand+Gesture+Recognition+Live" alt="Number Detection Project Image" class="w-full h-48 object-cover">
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-2xl font-bold accent-text">Number Detection using Hand Gestures</h3>
+                        <p class="text-slate-300 text-sm uppercase font-medium">Feb 2025</p>
+                        <p class="text-slate-400">**S-A-R Summary:** Developed a real-time computer vision system to detect and recognize numbers (1 to 5) based on finger positions.</p>
+                        
+                        <div class="pt-2">
+                             <h4 class="text-sm font-semibold text-white mb-2">Key Technologies:</h4>
+                             <div class="flex flex-wrap gap-2">
+                                 <span class="skill-badge !text-xs !py-1 !px-2">Python</span>
+                                 <span class="skill-badge !text-xs !py-1 !px-2">OpenCV</span>
+                                 <span class="skill-badge !text-xs !py-1 !px-2">MediaPipe</span>
+                                 <span class="skill-badge !text-xs !py-1 !px-2">Computer Vision</span>
+                             </div>
+                        </div>
+                        
+                        <div class="flex space-x-4 pt-4">
+                            <a href="https://github.com/aditya" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition font-medium flex items-center space-x-2">
+                                <i class="fab fa-github"></i> <span>Repository</span>
+                            </a>
+                            <button onclick="openModal('numberDetection')" class="text-cyan-400 hover:text-cyan-300 transition font-medium flex items-center space-x-2">
+                                <i class="fas fa-external-link-alt"></i> <span>Deep Dive</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3: Hand Tracking -->
+                <div class="bg-card-background rounded-xl overflow-hidden shadow-2xl hover:scale-[1.02] transition duration-500 hover:shadow-cyan-500/50">
+                    <img src="https://placehold.co/600x400/1E293B/2DD4BF?text=Hand+Tracking+System" alt="Hand Tracking Project Image" class="w-full h-48 object-cover">
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-2xl font-bold accent-text">Real-Time Hand Tracking System</h3>
+                        <p class="text-slate-300 text-sm uppercase font-medium">Jan 2025</p>
+                        <p class="text-slate-400">**S-A-R Summary:** Implemented a foundational system for capturing and analyzing hand movements and landmarks from a live feed.</p>
+                        
+                        <div class="pt-2">
+                             <h4 class="text-sm font-semibold text-white mb-2">Key Technologies:</h4>
+                             <div class="flex flex-wrap gap-2">
+                                 <span class="skill-badge !text-xs !py-1 !px-2">Python</span>
+                                 <span class="skill-badge !text-xs !py-1 !px-2">MediaPipe Hands</span>
+                                 <span class="skill-badge !text-xs !py-1 !px-2">OpenCV</span>
+                             </div>
+                        </div>
+                        
+                        <div class="flex space-x-4 pt-4">
+                            <a href="https://github.com/aditya" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition font-medium flex items-center space-x-2">
+                                <i class="fab fa-github"></i> <span>Repository</span>
+                            </a>
+                            <button onclick="openModal('handTracking')" class="text-cyan-400 hover:text-cyan-300 transition font-medium flex items-center space-x-2">
+                                <i class="fas fa-external-link-alt"></i> <span>Deep Dive</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Project Deep Dive Modal Structure -->
+    <div id="projectModal" class="modal-backdrop fixed inset-0 z-50 hidden items-center justify-center p-4" onclick="closeModal()">
+        <div class="bg-card-background rounded-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all duration-300" onclick="event.stopPropagation()">
+            <div class="sticky top-0 bg-card-background p-6 flex justify-between items-center border-b border-slate-700">
+                <h3 id="modalTitle" class="text-3xl font-bold accent-text"></h3>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-cyan-400 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="modalContent" class="p-6 space-y-8">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+
+            <div class="p-6 border-t border-slate-700 flex justify-end space-x-4">
+                <a id="modalGithubLink" target="_blank" class="py-2 px-4 text-sm font-semibold rounded-lg border border-slate-600 text-slate-300 hover:bg-slate-700 transition duration-300 flex items-center space-x-2">
+                    <i class="fab fa-github"></i> <span>View Code</span>
+                </a>
+                <button onclick="closeModal()" class="py-2 px-4 text-sm font-semibold rounded-lg bg-cyan-400 text-gray-900 hover:bg-cyan-300 transition duration-300">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer (Used across all pages) -->
+    <footer class="bg-gray-900 py-12 border-t border-slate-700/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Info Column -->
+                <div class="md:col-span-2">
+                    <h4 class="text-2xl font-black accent-text mb-3">Aditya Narain Tiwari</h4>
+                    <p class="text-sm text-slate-400 max-w-sm">
+                        ECE (IoT) B.Tech Engineer passionate about leveraging **Computer Vision** and **Embedded Systems** to create next-generation autonomous and scalable technical solutions.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="http://www.linkedin.com/in/aditya" target="_blank" class="text-xl text-slate-400 hover:text-cyan-400 transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/aditya" target="_blank" class="text-xl text-slate-400 hover:text-cyan-400 transition" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-xl text-slate-400 hover:text-cyan-400 transition" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <!-- >>> START: FOOTER NAVIGATION LINKS (UPDATED FOR MULTI-PAGE) <<< -->
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="index.html" class="hover:text-cyan-400 transition">Home</a></li>
+                        <li><a href="projects.html" class="hover:text-cyan-400 transition">Projects</a></li>
+                        <li><a href="education.html" class="hover:text-cyan-400 transition">Education & Experience</a></li>
+                        <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact</a></li>
+                    </ul>
+                    <!-- >>> END: FOOTER NAVIGATION LINKS <<< -->
+                </div>
+
+                <!-- Contact Details -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact Details</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-envelope pt-1 accent-text"></i>
+                            <a href="mailto:narayanadigkp23@gmail.com" class="hover:text-cyan-400 transition">narayanadigkp23@gmail.com</a>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-phone pt-1 accent-text"></i>
+                            <a href="tel:+919369669102" class="hover:text-cyan-400 transition">+91 9369669102</a>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-map-marker-alt pt-1 accent-text"></i>
+                            <span>Gorakhpur, India</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright Line -->
+            <div class="mt-8 pt-4 border-t border-slate-700/50 text-center text-xs text-slate-500">
+                <p>&copy; 2025 Aditya Narain Tiwari. All rights reserved. | <a href="#" class="hover:text-cyan-400">Privacy Policy</a></p>
+                <p class="mt-1">Designed and Developed by Aditya Narain Tiwari.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const projectData = {
+            fixedWing: {
+                title: "Fixed-Wing Aircraft Design & Fabrication",
+                github: "#",
+                content: [
+                    {
+                        heading: "Situation: The Aeromodelling Challenge",
+                        text: "The task was to participate in the IIT Bombay National Aeromodelling Competition, which required designing, fabricating, and flying a durable RC fixed-wing aircraft capable of completing missions like payload transport and precision flight."
+                    },
+                    {
+                        heading: "Action: Optimization and Prototyping",
+                        text: "I utilized **SolidWorks** for initial design mockups and performed detailed aerodynamic analysis, focusing on key metrics like wing loading and center of gravity (CG) balancing. Fabrication involved using lightweight materials like Sunpack and Depron sheets, followed by iterative flight tests to fine-tune maneuverability and endurance settings on the flight controller."
+                    },
+                    {
+                        heading: "Result: Competition Readiness",
+                        text: "The final aircraft successfully passed critical flight tests, demonstrating stability and required control for payload operations. We were able to participate in the national competition, completing all assigned missions on payload transport, precision flight control, and endurance, proving the design's practical viability."
+                    }
+                ]
+            },
+            numberDetection: {
+                title: "Real-Time Number Detection using Hand Gestures",
+                github: "https://github.com/aditya",
+                content: [
+                    {
+                        heading: "Situation: Need for Intuitive Interaction",
+                        text: "The goal was to create a natural, touchless human-computer interface capable of recognizing numerical input (1 to 5) directly from a webcam feed using simple hand gestures."
+                    },
+                    {
+                        heading: "Action: Computer Vision Implementation",
+                        text: "I developed a system using **Python**, **OpenCV**, and **MediaPipe Hands**. The MediaPipe library was used to accurately track 21 key landmarks on the hand in real-time. Custom algorithms were then implemented to analyze the angles and positions of the finger tips and base joints, allowing the system to reliably determine which fingers were extended to correspond to a specific number."
+                    },
+                    {
+                        heading: "Result: High-Accuracy Real-Time Recognition",
+                        text: "The system achieved high accuracy in a real-time environment, successfully processing webcam input and drawing hand landmarks, and immediately displaying the detected number (1 through 5) on the screen. This validated the application of computer vision for robust, intuitive gesture recognition."
+                    }
+                ]
+            },
+            handTracking: {
+                title: "Real-Time Hand Tracking System",
+                github: "https://github.com/aditya",
+                content: [
+                    {
+                        heading: "Situation: Building a Foundation",
+                        text: "As a precursor to advanced gesture control, a foundational project was needed to master the mechanics of real-time hand detection and tracking from a camera feed."
+                    },
+                    {
+                        heading: "Action: MediaPipe Integration",
+                        text: "The system was built with **Python**, **OpenCV**, and **MediaPipe Hands**. The focus was on setting up the webcam capture and correctly utilizing the MediaPipe pipeline to identify and render the 21 anatomical landmarks on the hand (e.g., fingertips, wrist, knuckles) without significant latency."
+                    },
+                    {
+                        heading: "Result: A Reusable Tracking Module",
+                        text: "The project delivered a stable, low-latency hand tracking module capable of displaying live landmarks. This module now serves as the base layer for any future projects involving higher-level hand gesture recognition or virtual interaction applications."
+                    }
+                ]
+            }
+        };
+
+        function openModal(projectId) {
+            const data = projectData[projectId];
+            const modal = document.getElementById('projectModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+            const modalGithubLink = document.getElementById('modalGithubLink');
+
+            if (!data) {
+                console.error("Project data not found for ID:", projectId);
+                return;
+            }
+
+            // Populate the modal
+            modalTitle.textContent = data.title;
+            modalGithubLink.href = data.github;
+            
+            modalContent.innerHTML = ''; // Clear previous content
+
+            // Populate S-A-R content
+            data.content.forEach(item => {
+                const section = document.createElement('div');
+                section.className = 'space-y-2';
+                section.innerHTML = `
+                    <h4 class="text-xl font-bold text-white border-b border-slate-800 pb-1">${item.heading}</h4>
+                    <p class="text-slate-300">${item.text}</p>
+                `;
+                modalContent.appendChild(section);
+            });
+
+            // Show the modal
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('projectModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = ''; // Restore background scrolling
+        }
+
+        // Close modal when pressing ESC key
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+    
+</body>
+</html>

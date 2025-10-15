@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Narain Tiwari - Education</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Custom variables for colors */
+        :root {
+            --accent-color: #2DD4BF; /* Teal 400 - used for accents */
+            --dark-background: #0F172A; /* Slate 900 - very dark blue/gray */
+            --card-background: #1E293B; /* Slate 800 - slightly lighter for cards */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-background);
+            color: #E2E8F0; /* Slate 200 - light text */
+            overflow-x: hidden;
+        }
+        .accent-text {
+            color: var(--accent-color);
+        }
+        .section-heading::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin-top: 8px;
+            margin-left: 0;
+            border-radius: 1.5px;
+        }
+        
+        .timeline-entry {
+            background-color: var(--card-background);
+            border-left: 3px solid var(--accent-color);
+            padding: 1rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            position: relative;
+        }
+        .timeline-entry:before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 1.25rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-40 w-full bg-[#0F172A]/90 backdrop-blur-sm shadow-xl transition-all duration-300">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Name (ANT) -->
+            <div class="text-2xl font-black text-white">ANT</div>
+            
+            <!-- Desktop Nav Links (Updated for multi-page) -->
+            <div class="hidden lg:flex space-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-cyan-400 transition duration-300">Home</a>
+                <a href="projects.html" class="hover:text-cyan-400 transition duration-300">Projects</a>
+                <a href="education.html" class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1">Education</a>
+                <a href="contact.html" class="hover:text-cyan-400 transition duration-300">Contact</a>
+            </div>
+
+            <!-- Icons and Resume Button (Right Side) -->
+            <div class="flex items-center space-x-4">
+                <a href="http://www.linkedin.com/in/aditya" target="_blank" class="text-xl hover:text-cyan-400 transition duration-300 hidden sm:block" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/aditya" target="_blank" class="text-xl hover:text-cyan-400 transition duration-300 hidden sm:block" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="py-2 px-4 text-sm font-semibold rounded-lg bg-cyan-400 text-gray-900 hover:bg-cyan-300 transition duration-300 shadow-md">
+                    Resume
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button (Hamburger) - Not implemented here for simplicity, but reserved space -->
+            <button class="lg:hidden text-2xl hover:text-cyan-400">
+                 <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 relative z-10 min-h-screen">
+
+        <!-- IV. Education & Experience -->
+        <section id="education-experience" class="py-12 md:py-24">
+             <h2 class="text-4xl font-extrabold mb-12 text-center section-heading mx-auto">Education & Experience</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
+                
+                <!-- Education Timeline -->
+                <div>
+                    <h3 class="text-2xl font-semibold accent-text mb-6">Education Timeline</h3>
+                    <div class="space-y-8">
+                        
+                        <div class="timeline-entry">
+                            <p class="text-sm font-medium text-slate-400 mb-1">2023 - 2027 (Expected)</p>
+                            <h4 class="text-xl font-bold">B.Tech, ECE (IoT)</h4>
+                            <p class="text-slate-300">MMMUT, Gorakhpur</p>
+                            <p class="text-sm text-slate-400 mt-2">GPA: 7.3/10.0</p>
+                        </div>
+                        
+                        <div class="timeline-entry">
+                            <p class="text-sm font-medium text-slate-400 mb-1">2022</p>
+                            <h4 class="text-xl font-bold">Class XII (CBSE)</h4>
+                            <p class="text-slate-300">Little Flower School</p>
+                            <p class="text-sm text-slate-400 mt-2">Percentage: 87.6%</p>
+                        </div>
+
+                        <div class="timeline-entry">
+                            <p class="text-sm font-medium text-slate-400 mb-1">2020</p>
+                            <h4 class="text-xl font-bold">Class X (CBSE)</h4>
+                            <p class="text-slate-300">Little Flower School</p>
+                            <p class="text-sm text-slate-400 mt-2">Percentage: 92.2%</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Experience / Responsibilities -->
+                <div>
+                    <h3 class="text-2xl font-semibold accent-text mb-6">Positions of Responsibility</h3>
+                    <div class="space-y-8">
+                        
+                        <!-- Responsibility 1 -->
+                        <div class="timeline-entry">
+                            <p class="text-sm font-medium text-slate-400 mb-1">Dec 2024 - Present</p>
+                            <h4 class="text-xl font-bold">Coordinator, 'Tech Srijan'</h4>
+                            <p class="text-slate-300">The Annual Techno-Management Fest of MMMUT, Gorakhpur</p>
+                            <ul class="list-disc list-inside text-sm text-slate-400 mt-2 space-y-1">
+                                <li>Managed logistical planning and execution for major technical and management events.</li>
+                                <li>Coordinated teams across multiple domains to ensure the festival's smooth operation.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Responsibility 2 -->
+                        <div class="timeline-entry">
+                            <p class="text-sm font-medium text-slate-400 mb-1">May 2024 - ongoing</p>
+                            <h4 class="text-xl font-bold">Member at SAE MMMUT</h4>
+                            <p class="text-slate-300">SAE India Collegiate Club, MMMUT</p>
+                            <ul class="list-disc list-inside text-sm text-slate-400 mt-2 space-y-1">
+                                <li>Actively involved in design and fabrication processes for aeromodelling and automotive projects.</li>
+                                <li>Applied for SAEINDIA Aerothon 2025, focusing on UAV design and autonomous flight systems.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Responsibility 3 -->
+                        <div class="timeline-entry">
+                            <p class="text-sm font-medium text-slate-400 mb-1">Dec 2024 - Jan 2025</p>
+                            <h4 class="text-xl font-bold">Member, Organizing Team</h4>
+                            <p class="text-slate-300">Tech Srijan</p>
+                            <ul class="list-disc list-inside text-sm text-slate-400 mt-2 space-y-1">
+                                <li>Supported event setup, promotion, and on-site management for various technical competitions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- -->
+        <!-- V. Achievements -->
+        <section id="achievements" class="py-12 md:py-24">
+            <h2 class="text-4xl font-extrabold mb-12 section-heading">Recognitions & Achievements</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Achievement 1: Internal SIH (Requested by user) -->
+                <div class="bg-card-background p-6 rounded-xl shadow-lg hover:shadow-cyan-500/30 transition duration-300 border-t-4 border-cyan-400">
+                    <div class="flex items-center space-x-3 mb-3">
+                         <i class="fas fa-medal text-2xl accent-text"></i>
+                         <h3 class="text-xl font-bold">Secured Rank 1 in Internal SIH</h3>
+                    </div>
+                    <p class="text-slate-400">Achieved the top position in the internal Smart India Hackathon competition, showcasing leadership and innovative problem-solving in a technical team environment.</p>
+                </div>
+
+                <!-- Achievement 2: Junkyard Tech Srijan -->
+                <div class="bg-card-background p-6 rounded-xl shadow-lg hover:shadow-cyan-500/30 transition duration-300 border-t-4 border-cyan-400">
+                    <div class="flex items-center space-x-3 mb-3">
+                         <i class="fas fa-trophy text-2xl accent-text"></i>
+                         <h3 class="text-xl font-bold">2nd Place, Junkyard Tech Srijan 2025</h3>
+                    </div>
+                    <p class="text-slate-400">Successfully applied engineering techniques to design and build a functional prototype using only scrap materials, demonstrating resourcefulness and practical design skills.</p>
+                </div>
+
+                <!-- Achievement 3: El-tiro Tech Srijan -->
+                <div class="bg-card-background p-6 rounded-xl shadow-lg hover:shadow-cyan-500/30 transition duration-300 border-t-4 border-cyan-400">
+                    <div class="flex items-center space-x-3 mb-3">
+                         <i class="fas fa-award text-2xl accent-text"></i>
+                         <h3 class="text-xl font-bold">3rd Place, El-tiro Tech Srijan 2024</h3>
+                    </div>
+                    <p class="text-slate-400">Recognition for creativity and technical expertise in the El-tiro event, highlighting competitive performance in high-stakes technical challenges.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Used across all pages) -->
+    <footer class="bg-gray-900 py-12 border-t border-slate-700/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Info Column -->
+                <div class="md:col-span-2">
+                    <h4 class="text-2xl font-black accent-text mb-3">Aditya Narain Tiwari</h4>
+                    <p class="text-sm text-slate-400 max-w-sm">
+                        ECE (IoT) B.Tech Engineer passionate about leveraging **Computer Vision** and **Embedded Systems** to create next-generation autonomous and scalable technical solutions.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="http://www.linkedin.com/in/aditya" target="_blank" class="text-xl text-slate-400 hover:text-cyan-400 transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/aditya" target="_blank" class="text-xl text-slate-400 hover:text-cyan-400 transition" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-xl text-slate-400 hover:text-cyan-400 transition" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="index.html" class="hover:text-cyan-400 transition">Home</a></li>
+                        <li><a href="projects.html" class="hover:text-cyan-400 transition">Projects</a></li>
+                        <li><a href="education.html" class="hover:text-cyan-400 transition">Education & Experience</a></li>
+                        <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact Details</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-envelope pt-1 accent-text"></i>
+                            <a href="mailto:narayanadigkp23@gmail.com" class="hover:text-cyan-400 transition">narayanadigkp23@gmail.com</a>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-phone pt-1 accent-text"></i>
+                            <a href="tel:+919369669102" class="hover:text-cyan-400 transition">+91 9369669102</a>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-map-marker-alt pt-1 accent-text"></i>
+                            <span>Gorakhpur, India</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright Line -->
+            <div class="mt-8 pt-4 border-t border-slate-700/50 text-center text-xs text-slate-500">
+                <p>&copy; 2025 Aditya Narain Tiwari. All rights reserved. | <a href="#" class="hover:text-cyan-400">Privacy Policy</a></p>
+                <p class="mt-1">Designed and Developed by Aditya Narain Tiwari.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
